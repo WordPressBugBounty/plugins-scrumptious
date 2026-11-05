@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "scrumptious/recipe",
+	"version": "0.3.0",
+	"title": "Recipe Card",
+	"category": "widgets",
+	"icon": "carrot",
+	"description": "A fast, schema-perfect recipe card.",
+	"keywords": [ "recipe", "ingredients", "food", "cooking", "scrumptious" ],
+	"textdomain": "scrumptious",
+	"attributes": {
+		"recipeId": {
+			"type": "number",
+			"default": 0
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": ""
+		},
+		"sections": {
+			"type": "object",
+			"default": {}
+		},
+		"showPrint": {
+			"type": "string",
+			"default": "default"
+		}
+	},
+	"usesContext": [ "postId", "postType" ],
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"reusable": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css"
+}

@@ -1,0 +1,217 @@
+.swp-block {
+	.swp-pick {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		width: 100%;
+		max-width: 420px;
+	}
+}
+
+.swp-editor {
+	padding: 24px;
+	border: 1px solid #eee4e9;
+	border-radius: 14px;
+	background: #ffffff;
+
+	&__status {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 12px;
+		min-height: 20px;
+		margin-bottom: 8px;
+		font-size: 12px;
+		color: #5c5f66;
+	}
+
+	&__start {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px 12px;
+		margin-bottom: 16px;
+		padding: 12px 16px;
+		border: 1px dashed var(--swp-accent, #e11d74);
+		border-radius: 10px;
+		background: #fff;
+		font-size: 13px;
+
+		.components-button {
+			margin-left: auto;
+		}
+	}
+
+	&__tools {
+		margin-right: auto;
+
+		.components-button.is-link {
+			font-size: 12px;
+		}
+	}
+
+	&__error {
+		margin-left: 8px;
+		color: #cc1818;
+	}
+
+	&__title {
+		margin: 0 0 8px;
+	}
+
+	&__summary {
+		margin: 0 0 16px;
+		color: #5c5f66;
+	}
+
+	&__meta {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+		gap: 12px;
+		padding: 12px 0;
+		border-block: 1px solid #eee4e9;
+	}
+
+	&__section {
+		margin: 24px 0 8px;
+		color: var(--swp-accent, #e11d74);
+	}
+
+	&__group {
+		margin-bottom: 12px;
+		padding: 12px;
+		border: 1px dashed #eee4e9;
+		border-radius: 8px;
+		background: #fff;
+	}
+}
+
+.swp-parsed {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 8px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+
+	li {
+		display: inline-block;
+		padding: 3px 8px;
+		border-radius: 999px;
+		background: #fdeef5;
+	}
+
+	&__amount,
+	&__unit {
+		margin-right: 4px;
+		font-weight: 600;
+		color: #c0145f;
+	}
+
+	&__notes {
+		margin-left: 4px;
+		color: #5c5f66;
+		font-style: italic;
+	}
+}
+
+.swp-help {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #5c5f66;
+}
+
+.swp-gallery-edit {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 6px;
+	margin: 0 0 12px;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		position: relative;
+		margin: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			aspect-ratio: 1;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+	}
+
+	&__remove.components-button {
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		min-width: 0;
+		height: 22px;
+		padding: 0;
+		background: rgba(255, 255, 255, 0.9);
+		border-radius: 50%;
+	}
+}
+
+/* AI course / cuisine / diet suggestions */
+.swp-tag-suggest {
+	margin-top: 8px;
+
+	.components-notice {
+		margin: 8px 0 0;
+	}
+}
+
+.swp-tag-suggest__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px;
+	margin-top: 8px;
+}
+
+.swp-tag-suggest__label {
+	flex: 0 0 100%;
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #757575;
+}
+
+.swp-tag-suggest__chip {
+	border: 1px solid #ddd;
+	border-radius: 2px;
+
+	em {
+		font-style: normal;
+		opacity: 0.7;
+	}
+}
+
+.swp-tag-suggest__chip.is-primary:disabled {
+	opacity: 1;
+	color: #fff;
+}
+
+.swp-pro-hint {
+	color: #646970;
+	font-size: 12px;
+	margin: 8px 0 0;
+
+	a {
+		color: #646970;
+	}
+}
+
+.swp-pro-hint__hide {
+	margin-left: 6px;
+	padding: 0 4px;
+	border: 0;
+	background: none;
+	color: #646970;
+	font-size: 14px;
+	line-height: 1;
+	cursor: pointer;
+}

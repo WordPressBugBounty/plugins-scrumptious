@@ -1,0 +1,50 @@
+/* Scrumptious admin screens: setup wizard and the Recipes list. */
+.swp-setup__steps{display:flex;gap:6px;margin:16px 0 24px;padding:0;list-style:none;counter-reset:s}
+.swp-setup__steps li{flex:1;margin:0;padding:8px 10px;border-top:4px solid #dcdcde;color:#646970;font-weight:600;counter-increment:s}
+.swp-setup__steps li::before{content:counter(s) ". "}
+.swp-setup__steps li.is-done{border-color:#8fbf9f;color:#1d2327}
+.swp-setup__steps li.is-current{border-color:#e11d74;color:#1d2327}
+.swp-setup__card{padding:24px 28px;border:1px solid #dcdcde;border-radius:12px;background:#fff}
+.swp-setup__card h2{margin-top:0;font-size:1.5em}
+.swp-setup__card label{display:block;margin:0 0 10px}
+.swp-setup__card .description{margin:-4px 0 14px 24px}
+.swp-setup__big{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.column-scrumptious_image{width:56px}
+.column-scrumptious_image img{border-radius:6px;display:block}
+.column-scrumptious_time{width:9em}
+.swp-noimg{display:grid;place-items:center;width:48px;height:48px;border-radius:6px;background:#fdeef5;color:#c0145f;font-weight:700}
+
+/* Settings screen: Pro card beside the settings (below them on narrow screens) */
+.swp-settings-layout{display:flex;gap:32px;align-items:flex-start}
+.swp-settings-main{flex:1;min-width:0}
+.swp-settings-side{flex:0 0 280px;position:sticky;top:48px;margin-top:20px;display:flex;flex-direction:column;gap:16px}
+.swp-pro-card{padding:20px 22px;background:#fff;border:1px solid #eee4e9;border-top:4px solid #e11d74;border-radius:8px}
+.swp-pro-card h2{margin:0 0 8px;font-size:1.2em}
+.swp-pro-card ul{margin:0 0 12px 1.1em;list-style:disc}
+.swp-pro-card li{margin-bottom:6px}
+.swp-pro-card__small{color:#5c5f66;font-size:12px}
+.swp-pro-card .swp-pro-card__button{background:#e11d74;border-color:#c0145f}
+.swp-pro-card .swp-pro-card__button:hover,.swp-pro-card .swp-pro-card__button:focus{background:#c0145f;border-color:#a3104f}
+@media (max-width:1100px){.swp-settings-layout{flex-direction:column}.swp-settings-side{position:static;flex-basis:auto;max-width:520px}}
+
+/* Small Pro hints (links out, one global dismiss) */
+.swp-pro-hint{color:#646970;font-size:12px;margin:8px 0}
+.swp-pro-hint a{color:#646970}
+.swp-pro-hint__hide{margin-left:6px;text-decoration:none;font-size:14px;line-height:1}
+
+/* Import screen: review request after a successful import */
+.swp-import-review{margin:12px 0 0;padding:12px 14px;background:#fdeef5;border-left:4px solid #e11d74;border-radius:4px}
+.swp-import-review p{margin:0 0 8px}
+.swp-import-review p:last-child{margin:0}
+
+/* Black Friday line on the Pro card */
+.swp-pro-card__deal{margin:0 0 12px;padding:8px 10px;background:#fff5d6;border-radius:6px;font-weight:600}
+.swp-pro-card__deal a{color:#2b1d2e}
+
+/* Optional newsletter signup (Settings card, setup wizard) */
+.swp-newsletter-card{padding:16px 18px;background:#fff;border:1px solid #eee4e9;border-radius:8px}
+.swp-newsletter-card h2{margin:0 0 6px;font-size:1.1em}
+.swp-newsletter p{margin:0 0 8px}
+.swp-newsletter__fields input[type=email]{max-width:100%;margin-bottom:6px}
+.swp-newsletter__small{color:#646970;font-size:12px}
+.swp-setup__newsletter{margin-top:24px;padding-top:16px;border-top:1px solid #eee4e9}

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "scrumptious/jump",
+	"version": "0.3.0",
+	"title": "Jump to Recipe",
+	"category": "widgets",
+	"icon": "arrow-down-alt",
+	"description": "Buttons that jump to the recipe card and open the print view.",
+	"keywords": [ "jump", "recipe", "print", "scrumptious" ],
+	"textdomain": "scrumptious",
+	"attributes": {
+		"recipeId": { "type": "number", "default": 0 },
+		"label": { "type": "string", "default": "" },
+		"showPrint": { "type": "boolean", "default": true }
+	},
+	"usesContext": [ "postId" ],
+	"supports": {
+		"html": false,
+		"align": [ "left", "center", "right" ],
+		"spacing": { "margin": true, "padding": false }
+	},
+	"editorScript": "file:./index.js"
+}

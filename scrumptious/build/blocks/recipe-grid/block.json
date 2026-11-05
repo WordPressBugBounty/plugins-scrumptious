@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "scrumptious/recipe-grid",
+  "version": "0.5.0",
+  "title": "Recipe Grid",
+  "category": "widgets",
+  "icon": "grid-view",
+  "description": "A grid of recipes, filtered by course, cuisine or diet.",
+  "keywords": [
+    "recipes",
+    "index",
+    "grid",
+    "archive",
+    "scrumptious"
+  ],
+  "textdomain": "scrumptious",
+  "attributes": {
+    "course": {
+      "type": "number",
+      "default": 0
+    },
+    "cuisine": {
+      "type": "number",
+      "default": 0
+    },
+    "diet": {
+      "type": "number",
+      "default": 0
+    },
+    "count": {
+      "type": "number",
+      "default": 6
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "date",
+      "enum": [
+        "date",
+        "rating",
+        "title",
+        "rand"
+      ]
+    },
+    "showRating": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTime": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "scrumptious/recipe-part",
+  "version": "0.5.0",
+  "title": "Recipe Part",
+  "category": "widgets",
+  "icon": "carrot",
+  "description": "One part of a recipe (ingredients, instructions, times, nutrition, rating…). Use it to build your own recipe layouts and templates.",
+  "keywords": [
+    "recipe",
+    "ingredients",
+    "instructions",
+    "nutrition",
+    "rating",
+    "scrumptious"
+  ],
+  "textdomain": "scrumptious",
+  "attributes": {
+    "part": {
+      "type": "string",
+      "default": "ingredients",
+      "enum": [
+        "summary",
+        "rating",
+        "meta",
+        "ingredients",
+        "instructions",
+        "notes",
+        "gallery",
+        "share",
+        "nutrition",
+        "actions"
+      ]
+    },
+    "recipeId": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true
+    }
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "scrumptious",
+  "version": "1.1.0",
+  "private": true,
+  "description": "ScrumptiousWP recipe plugin",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build --webpack-src-dir=src --output-path=build",
+    "start": "wp-scripts start --webpack-src-dir=src --output-path=build",
+    "lint:js": "wp-scripts lint-js src",
+    "zip": "bash bin/build-zip.sh",
+    "zip:pro": "bash bin/build-pro-zip.sh",
+    "test:js": "node --test tests/js/card.test.js",
+    "test:e2e": "playwright test -c tests/e2e/playwright.config.js",
+    "e2e:setup": "bash tests/e2e/setup.sh"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0"
+  }
+}
